@@ -1,0 +1,40 @@
+python -m django startproject
+py -m django --version
+
+python manage.py runserver
+python manage.py makemigrations
+python manage.py migrate
+python manage.py shell
+>>> import os
+>>> import django
+>>> from home.models import CuaHang
+>>> CuaHang.objects.all()
+>>> from django.utils impor
+t timezone
+>>> cuahang = CuaHang(Ten_C
+ua_Hang = 'VinMart', Ma_Cua_Hang = 'VM', Ngay_Tao = ti
+mezone.now())
+>>> cuahang.save()
+>>> CuaHang.objects.all()
+
+python manage.py createsuperuser
+Username (leave blank to use 'hien'): nguyenvieanh
+Email address: nguyenvieanh2103@gmail.com
+Password:
+Password (again): 
+t match.Password:
+Password (again):
+This password is too short. 
+It must contain at least 8 characters.This password is entirely numeric.Bypass password validation and create user anyway? [y/N]: ySuperuser created successfully.
+
+python -m pip install mysqlclient
+python manage.py makemigrations
+python manage.py migrate
+
+DATABASES = {'default': 
+{'ENGINE': 'django.db.backends.mysql',
+'NAME': 'quan_ly_cua_hang',
+'USER' : 'root@localhost',
+'PASSWORD' : '',
+'HOST' : '127.0.0.1',
+'PORT' : '3306'}}
